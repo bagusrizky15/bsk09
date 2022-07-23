@@ -77,9 +77,7 @@ require 'system/config/koneksi.php'
             <div class="btn" align="center">Login</div>
           </a> <!-- End Btn -->
 
-          <a href="#">
-            <div id="btn2" align="center">Register</div>
-          </a> <!-- End Btn2 -->
+
         </div>
       </div>
     </div>
