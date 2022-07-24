@@ -33,7 +33,7 @@
               </script>";
 
               echo "<meta http-equiv='refresh'
-              content='0; url=http://localhost/bsk09/page/admin.php?page=data-admin-full'>";
+              content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-admin-full'>";
 
               return FALSE;      
       }
@@ -45,7 +45,7 @@
               </script>";
 
       echo "<meta http-equiv='refresh'
-      content='0; url=http://localhost/bsk09/page/admin.php?page=data-admin-full'>";
+      content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-admin-full'>";
     }
  ?>
 
@@ -133,8 +133,8 @@ function cek_data() {
       daftar_user.telepon.focus();
       return false;
    }
-   if(x.length!=12){
-      alert("Nomor telepon harus 12 karakter!");
+   if(x.length!=10){
+      alert("Nomor telepon minimal 10 karakter");
       daftar_user.telepon.focus();
       return false;
    }

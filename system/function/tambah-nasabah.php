@@ -150,11 +150,6 @@ function cek_data() {
       daftar_user.telepon.focus();
       return false;
    }
-   if(x.length!=12){
-      alert("Nomor telepon harus 12 karakter!");
-      daftar_user.telepon.focus();
-      return false;
-   }
    var x=daftar_user.email.value;
    var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 

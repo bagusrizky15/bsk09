@@ -73,7 +73,7 @@ require 'system/config/koneksi.php'
         <br> <br>
 
         <div class="center">
-          <a href="page/login.php" target="_blank">
+          <a href="page/login.php">
             <div class="btn" align="center">Login</div>
           </a> <!-- End Btn -->
 
@@ -165,8 +165,7 @@ require 'system/config/koneksi.php'
         ·
         <a href="#baz">Lokasi</a>
         </p>
-
-        <p class="footer-company-name">&copy; BERAMAL Bener Ramah Lingkungan | Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a></p>
+        <p class="footer-company-name">&copy; BERAMAL Bener Ramah Lingkungan</p>
     </div>
 
     <div class="footer-center">
