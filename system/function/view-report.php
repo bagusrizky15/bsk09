@@ -49,7 +49,7 @@
         }
     },
     series: [ {
-        name: 'Nasabah RW. 009',
+        name: 'Nasabah Kelurahan Bener',
         data: [<?php $query = mysqli_query($conn, "SELECT COUNT(nin) AS jiwa FROM nasabah group by rt"); while($row = mysqli_fetch_array($query)){echo ($row['jiwa']).","; } ?>]
     }]
 });
