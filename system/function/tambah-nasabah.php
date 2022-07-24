@@ -1,5 +1,6 @@
 
 <?php
+    error_reporting(0);
     require_once("../system/config/koneksi.php");
 
     $no = mysqli_query($conn, "SELECT nin FROM nasabah ORDER BY nin DESC");
@@ -12,11 +13,11 @@
     $thn = date("y");
 
     if(strlen($tambah) == 1){
-        $format = "NSB".$thn.$bln."00".$tambah;
+        $format = "ID".$thn.$bln."00".$tambah;
     }else if (strlen($tambah) == 2) {
-        $format = "NSB".$thn.$bln."0".$tambah;
+        $format = "ID".$thn.$bln."0".$tambah;
     }else{
-        $format = "NSB".$thn.$bln.$tambah;
+        $format = "ID".$thn.$bln.$tambah;
     }
 
     if(isset($_POST['simpan'])){
@@ -25,8 +26,8 @@
       $rt = $_POST['rt'];
       $alamat = $_POST['alamat'];
       $telepon = $_POST['telepon'];
-      $email = $_POST['email'];
-      $password = $_POST['password'];
+      // $email = $_POST['email'];
+      // $password = $_POST['password'];
       $saldo = $_POST['saldo'];
       $sampah = $_POST['sampah'];
 
@@ -113,16 +114,15 @@
 function cek_data() {
    var x=daftar_user.nama.value;
    var x1=parseInt(x);
-   
    if(x==""){
       alert("Maaf harap input nama nasabah!");
       daftar_user.nama.focus(); 
       return false;
-   } 
+   }
    if(isNaN(x1)==false){
       alert ("Maaf nama harus di input huruf!");
       daftar_user.nama.focus();
-      return false;
+      return false;
    }
     var p=daftar_user.rt.value;
     if (p =="p"){
@@ -150,32 +150,34 @@ function cek_data() {
       daftar_user.telepon.focus();
       return false;
    }
-   var x=daftar_user.email.value;
-   var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-   if(x==""){
-      alert("Maaf harap input email!");
-      daftar_user.email.focus(); 
-      return false;
-   }
-   if(!x.match(cek_email)){
-      alert("Format penulisan email tidak sesuai!");
-      daftar_user.email.focus();
-      return false;
-   }
-   var x=daftar_user.password.value;
-   var panjang=x.length;
+  //  var x=daftar_user.email.value;
+  //  var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-   if(x==""){
-      alert("Maaf harap input password!");
-      daftar_user.password.focus(); 
-      return false;
-   }
-   if(panjang<6 || panjang>20){
-      alert("Password di input minimum 6 karakter dan maksimum 20 karakter!");
-      daftar_user.password.focus();
-      return false;
-  }else{
+  //  if(x==""){
+  //     alert("Maaf harap input email!");
+  //     daftar_user.email.focus(); 
+  //     return false;
+  //  }
+  //  if(!x.match(cek_email)){
+  //     alert("Format penulisan email tidak sesuai!");
+  //     daftar_user.email.focus();
+  //     return false;
+  //  }
+  //  var x=daftar_user.password.value;
+  //  var panjang=x.length;
+
+  //  if(x==""){
+  //     alert("Maaf harap input password!");
+  //     daftar_user.password.focus(); 
+  //     return false;
+  //  }
+  //  if(panjang<6 || panjang>20){
+  //     alert("Password di input minimum 6 karakter dan maksimum 20 karakter!");
+  //     daftar_user.password.focus();
+  //     return false;
+  // }
+  else{
   confirm("Apakah Anda yakin sudah input data dengan benar?");
   }
    return true;
@@ -224,15 +226,15 @@ function cek_data() {
            <input type="text" placeholder="Masukan nomor telepon" name="telepon" />
          </div>
 
-         <div class="form-group">
+         <!-- <div class="form-group">
            <label class="">E-mail</label>
            <input type="text" placeholder="Masukan alamat email" name="email" />
-         </div>
+         </div> -->
 
-         <div class="form-group">
+         <!-- <div class="form-group">
            <label class="">Password</label>
            <input type="text" placeholder="Masukan password" name="password" />
-         </div>
+         </div> -->
 
          <div class="form-group">
            <input type="hidden" name="saldo" />

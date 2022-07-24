@@ -14,7 +14,7 @@
         text: 'Data Jumlah Nasabah Tiap RT'
     },
     subtitle: {
-        text: 'Source: Bank Sampah Kenanga 09'
+        text: 'Source: Kelurahan Bener Kecamatan Tegalrejo'
     },
     xAxis: {
         categories: [<?php $query = mysqli_query($conn, "SELECT * FROM nasabah group by rt"); while($row = mysqli_fetch_array($query)){echo $row['rt'].","; } ?>],

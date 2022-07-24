@@ -14,7 +14,7 @@
         text: 'Data Jumlah Nasabah Tiap RT'
     },
     subtitle: {
-        text: 'Source: Bank Sampah Kenanga 09'
+        text: 'Source: Kelurahan Bener Kecamatan Tegalrejo'
     },
     xAxis: {
 		
