@@ -12,9 +12,9 @@
     $thn = date("y");
 
     if(strlen($tambah) == 1){
-        $format = "ADM".$thn.$bln."0".$tambah;
+        $format = "admin"."0".$tambah;
     }else{
-        $format = "ADM".$thn.$bln.$tambah;
+        $format = "admin".$tambah;
     }
 
     if(isset($_POST['simpan'])){
@@ -159,8 +159,8 @@ function cek_data() {
       daftar_user.password.focus(); 
       return false;
    }
-   if(panjang<6 || panjang>20){
-      alert("Password di input minimum 6 karakter dan maksimum 20 karakter!");
+   if(panjang<5 || panjang>20){
+      alert("Password di input minimum 5 karakter dan maksimum 20 karakter!");
       daftar_user.password.focus();
       return false;
     }
