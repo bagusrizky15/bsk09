@@ -82,16 +82,8 @@ $row = mysqli_num_rows($sql); // Ambil jumlah data dari hasil eksekusi $sql
 <?php } ?>
 
 </table>
+<script>
+    window.print();
+  </script>
 </body>
 </html>
-
-<?php
-$html = ob_get_contents();
-ob_end_clean();
-        
-require_once("../../asset/plugin/html2pdf/html2pdf.class.php");
-$pdf = new HTML2PDF('P','A4','en');
-$pdf->WriteHTML($html);
-$filename = "Data-Tarik-(".date('d-m-Y').").pdf";
-$pdf->Output("$filename");
-?>
