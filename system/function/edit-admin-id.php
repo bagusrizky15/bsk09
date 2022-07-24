@@ -5,10 +5,10 @@
   $id = $_POST['id'];
   $nama = $_POST['nama'];
   $telepon = $_POST['telepon'];
-  $username = $_POST['username'];
+  $nia = $_POST['nia'];
   $password = $_POST['password'];
 
-  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$username', password = '$password' WHERE nia='".$id."' ";
+  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$nia', password = '$password' WHERE nia='".$id."' ";
   $queryact = mysqli_query($conn, $query);
   echo "<meta http-equiv='refresh'
    content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-admin-full'>";
@@ -70,9 +70,6 @@
       ?>
   
           <form action="" method="post">
-          <label class="text-left">Nomor Induk Admin</label>
-          <input type="text" style="cursor: not-allowed;" name="nia" disabled="disabled" value="<?php echo $_GET['id']; ?>" />
-
          <div class="form-group">
           <label class="">Nama Admin</label>
           <input type="text" name="nama" value="<?php echo $row['nama'] ?> "/>
@@ -83,7 +80,7 @@
          </div>
          <div class="form-group">
           <label class="">E-mail</label>
-          <input type="text" name="username" value="<?php echo $row['email'] ?>" required/>
+          <input type="text" name="nia" value="<?php echo $row['email'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Password</label>
@@ -104,10 +101,6 @@
       ?>
   
           <form action="" method="post">
-          <label class="text-left">Nomor Induk Admin</label>
-          <input type="text" name="nia" disabled="disabled" value="<?php echo @$_SESSION['nia'] ?>" />
-                   <input name="id" type="hidden"  value="<?php echo @$_SESSION['nia'] ?>" />
-
          <div class="form-group">
           <label class="">Nama Admin</label>
           <input type="text" name="nama" value="<?php echo $row['nama'] ?> "/>
@@ -117,8 +110,8 @@
           <input type="text" name="telepon" value="<?php echo $row['telepon'] ?>" required/>
          </div>
          <div class="form-group">
-          <label class="">Username</label>
-          <input type="text" name="username" value="<?php echo $row['username'] ?>" required/>
+          <label class="">nia</label>
+          <input type="text" name="nia" value="<?php echo $row['nia'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Password</label>

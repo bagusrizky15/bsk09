@@ -20,7 +20,7 @@ header("Content-Disposition: attachment; filename='$filename'");
         <th>Nama Nasabah</th>
         <th>Alamat</th>
         <th>Nomor Telepon</th>
-        <th>Username</th>
+        <th>nia</th>
         <th>Password</th>
         <th>Saldo (Rp)</th>
         <th>Berat (Kg)</th>
@@ -36,7 +36,7 @@ header("Content-Disposition: attachment; filename='$filename'");
             <td><?php echo $row['nama'] ?></td>
             <td><?php echo $row['alamat'] ?></td>
             <td><?php echo $row['telepon'] ?></td>
-            <td><?php echo $row['username'] ?></td>
+            <td><?php echo $row['nia'] ?></td>
             <td><?php echo $row['password'] ?></td>
             <td><?php echo $row['saldo'] ?></td>
             <td><?php echo $row['sampah'] ?></td>

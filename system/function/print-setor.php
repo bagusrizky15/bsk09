@@ -52,7 +52,7 @@
   <th>BERAT</th>
   <th>HARGA</th>
   <th>TOTAL</th>
-  <th>NIA</th>
+  <th>nia</th>
 </tr>
 </thead>
 

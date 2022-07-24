@@ -183,7 +183,7 @@ function cek_data() {
 	   
      <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
          <div class="form-group">
-           <label class="text-left">Nomor Induk Admin</label>
+           <label class="text-left">nia admin</label>
            <input style="cursor: not-allowed;" type="text" name="nia" value="<?php echo $format; ?>" readonly/>
          </div>
 

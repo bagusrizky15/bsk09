@@ -27,7 +27,7 @@
             <th>Berat</th>
             <th>Harga</th>
             <th>Total</th>
-            <th>NIA</th>
+            <th>nia</th>
         </tr>
         </thead>
         <tfoot>
@@ -38,7 +38,7 @@
             <th>Berat</th>
             <th>Harga</th>
             <th>Total</th>
-            <th>NIA</th>
+            <th>nia</th>
         </tr>   
         </tfoot>
         <tbody>

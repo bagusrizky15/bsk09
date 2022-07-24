@@ -50,7 +50,7 @@
         <th>NAMA</th>
         <th>ALAMAT</th>
         <th>TELEPON</th>
-        <th>USERNAME</th>
+        <th>nia</th>
         <th>SALDO</th>
         <th>BERAT</th>
       </tr>

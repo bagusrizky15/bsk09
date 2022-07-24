@@ -4,10 +4,10 @@
  if (isset($_POST['simpan'])) {
   $nama = $_POST['nama'];
   $telepon = $_POST['telepon'];
-  $username = $_POST['username'];
+  $nia = $_POST['nia'];
   $password = $_POST['password'];
 
-  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$username', password = '$password' WHERE nia='".@$_SESSION['nia']."' ";
+  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$nia', password = '$password' WHERE nia='".@$_SESSION['nia']."' ";
   $queryact = mysqli_query($conn, $query);
   header("Location: admin.php");
  }
@@ -69,7 +69,7 @@
 	
      <div class="form-group">
           <form action="" method="post">
-          <label class="text-left">Nomor Induk Admin</label>
+          <label class="text-left">nia admin</label>
           <input type="text" style="cursor: not-allowed;" name="nia" disabled="disabled" value="<?php echo @$_SESSION['nia'] ?>" />
          </div>
          <div class="form-group">
@@ -82,7 +82,7 @@
          </div>
          <div class="form-group">
           <label class="">E-mail</label>
-          <input type="text" name="username" value="<?php echo $row['email'] ?>" required/>
+          <input type="text" name="nia" value="<?php echo $row['email'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Password</label>

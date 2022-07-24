@@ -42,7 +42,7 @@
 <table align="center" cellspacing="0">
 <thead>
 <tr>
-  <th>NIA</th>
+  <th>nia</th>
   <th>NAMA</th>
   <th>TELEPON</th>
   <th>E-MAIL</th>

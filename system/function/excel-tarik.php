@@ -21,7 +21,7 @@ header("Content-Disposition: attachment; filename='$filename'");
         <th>Nomor Induk Nasabah</th>
         <th>Saldo (Rp)</th>
         <th>Jumlah Tarik</th>
-        <th>Nomor Induk Admin</th>
+        <th>nia admin</th>
     </tr>
     <?php
             $no = 0;

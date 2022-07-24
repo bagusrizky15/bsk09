@@ -1,3 +1,6 @@
+<?php
+error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +24,7 @@
         <thead>
         <tr>
             <th>No</th>
-            <th>NIA</th>
+            <th>nia</th>
             <th>Nama Admin</th>
             <th>Nomor Telepon</th>
             <th>E-mail</th>
@@ -32,7 +35,7 @@
         <tfoot>
         <tr>
             <th>No</th>
-            <th>NIA</th>
+            <th>nia</th>
             <th>Nama Admin</th>
             <th>Nomor Telepon</th>
             <th>E-mail</th>

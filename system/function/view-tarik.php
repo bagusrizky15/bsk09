@@ -26,7 +26,7 @@
             <th>NIN</th>
             <th>Saldo</th>
             <th>Jumlah Tarik</th>
-            <th>NIA</th>
+            <th>nia</th>
             <th>Aksi</th>
         </tr>
         </thead>
@@ -38,7 +38,7 @@
             <th>NIN</th>
             <th>Saldo</th>
             <th>Jumlah Tarik</th>
-            <th>NIA</th>
+            <th>nia</th>
             <th>Aksi</th>       
         </tr>   
         </tfoot>

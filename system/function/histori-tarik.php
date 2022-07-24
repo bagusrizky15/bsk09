@@ -25,7 +25,7 @@
             <th>Tanggal</th>
             <th>Saldo (Rp)</th>
             <th>Jumlah Tarik</th>
-            <th>NIA</th>
+            <th>nia</th>
         </tr>
         </thead>
         <tfoot>
@@ -34,7 +34,7 @@
             <th>Tanggal</th>
             <th>Saldo (Rp)</th>
             <th>Jumlah Tarik</th>
-            <th>NIA</th>
+            <th>nia</th>
         </tr>   
         </tfoot>
         <tbody>

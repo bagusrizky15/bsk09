@@ -35,7 +35,7 @@ include '../system/config/koneksi.php';
 			if ($user == "" || $pass == "") {
 				echo "
 				<script>
-					alert('Username dan Password tidak boleh kosong!');
+					alert('nia dan Password tidak boleh kosong!');
 					document.location.href ='login.php';
 				</script>
 				";
@@ -77,7 +77,7 @@ include '../system/config/koneksi.php';
 				else {
 				echo "
 				<script>
-					alert('Maaf username dan password tidak valid!');
+					alert('Maaf nia dan password tidak valid!');
 					document.location.href ='login.php';
 				</script>
 				";

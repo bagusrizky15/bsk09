@@ -6,10 +6,10 @@
   $nama = $_POST['nama'];
   $alamat = $_POST['alamat'];
   $telepon = $_POST['telepon'];
-  $username = $_POST['username'];
+  $nia = $_POST['nia'];
   $password = $_POST['password'];
 
-  $query = "UPDATE nasabah SET nama = '$nama', alamat = '$alamat', telepon = '$telepon', username = '$username', password = '$password' WHERE nin='".$id."' ";
+  $query = "UPDATE nasabah SET nama = '$nama', alamat = '$alamat', telepon = '$telepon', nia = '$nia', password = '$password' WHERE nin='".$id."' ";
   $queryact = mysqli_query($conn, $query);
   echo "<meta http-equiv='refresh'
    content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-nasabah-full'>";
@@ -106,7 +106,7 @@
           <input type="text" disabled="disabled" name="total" value="<?php echo $row['total'] ?>"/>
          </div>
          <div class="form-group">
-          <label class="">Nomor Induk Admin</label>
+          <label class="">nia admin</label>
           <input type="text" disabled="disabled" name="nia" value="<?php echo $row['nia'] ?>"/>
          </div>
 
@@ -122,7 +122,7 @@
       ?>
   
           <form action="" method="post">
-          <label class="text-left">Nomor Induk Admin</label>
+          <label class="text-left">nia admin</label>
           <input type="text" name="nia" disabled="disabled" value="<?php echo @$_SESSION['nin'] ?>" />
                    <input name="id" type="hidden"  value="<?php echo @$_SESSION['nin'] ?>" />
 
@@ -139,8 +139,8 @@
           <input type="text" name="telepon" value="<?php echo $row['telepon'] ?>" required/>
          </div>
          <div class="form-group">
-          <label class="">Username</label>
-          <input type="text" name="username" value="<?php echo $row['username'] ?>" required/>
+          <label class="">nia</label>
+          <input type="text" name="nia" value="<?php echo $row['nia'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Password</label>

@@ -164,10 +164,6 @@ function cek_data() {
           <label class="">Jumlah Penarikan)</label>
           <input type="text" placeholder="Masukan jumlah tarik" name="jumlah_tarik" />
          </div>
-         <div class="form-group">
-          <label class="">Nomor Induk Admin</label>
-          <input type="text" style="cursor: not-allowed;" name="nia" value="<?php echo $_SESSION["nia"]; ?>" readonly />
-         </div>
          
          <input type="submit" name="simpan" value="Simpan Data" />
          

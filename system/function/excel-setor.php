@@ -23,7 +23,7 @@ header("Content-Disposition: attachment; filename='$filename'");
         <th>Berat (Kg)</th>
         <th>Harga (Rp)</th>
         <th>Total (Rp)</th>
-        <th>Nomor Induk Admin</th>
+        <th>nia admin</th>
     </tr>
     <?php
             $no = 0;

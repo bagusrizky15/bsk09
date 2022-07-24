@@ -16,10 +16,10 @@ header("Content-Disposition: attachment; filename='$filename'");
 	<table id="example" class="display" cellspacing="0" width="100%" border="0" >
 	<tr>
 		<th>No</th>
-        <th>NIA</th>
+        <th>nia</th>
         <th>Nama Admin</th>
         <th>Nomor Telepon</th>
-        <th>Username</th>
+        <th>nia</th>
         <th>Password</th>
         <th>Level</th>
     </tr>
@@ -33,7 +33,7 @@ header("Content-Disposition: attachment; filename='$filename'");
             <td><?php echo $row['nia'] ?></td>
             <td><?php echo $row['nama'] ?></td>
             <td><?php echo $row['telepon'] ?></td>
-            <td><?php echo $row['username'] ?></td>
+            <td><?php echo $row['nia'] ?></td>
             <td><?php echo $row['password'] ?></td>
             <td><?php echo $row['level'] ?></td>
         </tr>

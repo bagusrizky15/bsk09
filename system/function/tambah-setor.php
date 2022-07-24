@@ -157,8 +157,6 @@ function cek_data() {
 				
 				"<div class='form-group'><label class=''>Total (Rp)</label><input type='text' placeholder='Otomatis terisi' style='cursor: not-allowed;' id='total'  name='total' readonly /></div>" +
 				
-				"<div class='form-grou'><label class=''>Nomor Induk Admin</label><input type='text' style'cursor: not-allowed;' name='nia'value='<?php echo $_SESSION['nia']; ?>' readonly /></div>" +
-				
 				"<br><br>");
 
 			
@@ -232,10 +230,6 @@ function cek_data() {
          <div class="form-group">
           <label class="">Total (Rp)</label>
           <input type="text" placeholder="Otomatis terisi" style="cursor: not-allowed;" id="total"  name="total" readonly />
-         </div>
-         <div class="form-group">
-          <label class="">Nomor Induk Admin</label>
-          <input type="text" style="cursor: not-allowed;" name="nia" value="<?php echo $_SESSION["nia"]; ?>" readonly />
          </div>
          
          <input type="submit" name="simpan" value="Simpan" />

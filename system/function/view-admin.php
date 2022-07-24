@@ -57,8 +57,6 @@
 
 	   <div class="form-group">
           <form action="" method="post">
-          <label class="text-left">Nomor Induk Admin</label>
-          <input type="text" style="cursor: not-allowed;" name="nia" disabled="disabled" value="<?php echo $row['nia'] ?>" />
          </div>
          <div class="form-group">
           <label class="">Nama Admin</label>
@@ -70,7 +68,7 @@
          </div>
          <div class="form-group">
           <label class="">E-mail</label>
-          <input type="text" style="cursor: not-allowed;" name="username" disabled="disabled" value="<?php echo $row['email'] ?>" required/>
+          <input type="text" style="cursor: not-allowed;" name="nia" disabled="disabled" value="<?php echo $row['email'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Password</label>

@@ -49,7 +49,7 @@
   <th>TANGGAL TARIK</th>
   <th>SALDO</th>
   <th>JUMLAH TARIK</th>
-  <th>NIA</th>
+  <th>nia</th>
 </tr>
 </thead>
 
