@@ -123,12 +123,9 @@ error_reporting(E_ALL | E_STRICT);
           <input type="text" name="deskripsi" value="<?php echo $row['deskripsi'] ?>" required/>
          </div>
          
-
-
          <input name="id" type="hidden"  value="<?php echo $_GET['id']; ?>" />
          <input class="button" type="submit" name="simpan" value="Simpan Data" />
          
-
          </form>     
      
 <?php } ?>

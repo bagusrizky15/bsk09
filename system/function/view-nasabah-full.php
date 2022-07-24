@@ -83,6 +83,7 @@
                 <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-nasabah.php?id=<?php echo $row['nin']; ?>">
                 <button><i class="fa fa-trash-o"></i>hapus</button>
                 </a>
+                
             </td>
         </tr>
         <?php } ?>

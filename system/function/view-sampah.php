@@ -43,23 +43,30 @@
         <?php
             $no = 0;
             $query = mysqli_query($conn, "SELECT * FROM sampah ORDER BY jenis_sampah ASC");
-            while($row = mysqli_fetch_assoc($query)){$no++;
+            while($row = mysqli_fetch_assoc($query))
+            {
+                $no++;
         ?>
         <tr align="center">
             <td><?php echo "$no" ?></td>
             <td><?php echo $row['jenis_sampah'] ?></td>
             <td><?php echo $row['satuan'] ?></td>
-            <td><?php echo "Rp. ".number_format($row['harga'], 2, ",", ".")  ?></td>
+            <td><?php echo "Rp. ".number_format($row['harga'], 2, "," , ".")  ?></td>
             <td><img src="../asset/internal/img/uploads/<?php echo $row['gambar'] ?>" width="100px" height="50px"></td>
             <td><?php echo $row['deskripsi'] ?></td>
             <td>
 
-                <a href="admin.php?page=edit-sampah&id=<?php echo $row['id']; ?>">
-                <button><i class="fa fa-pencil"></i>edit</button> 
+                <a href="admin.php?page=edit-sampah&id=<?= $row['id']; ?>">
+                <button>
+                    <i class="fa fa-pencil"></i>edit
+                </button> 
                 </a>
                 
-                <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-sampah.php?id=<?php echo $row['jenis_sampah']; ?>">
-                <button><i class="fa fa-trash-o"></i>hapus</button>
+                <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" 
+                href="../system/function/delete-sampah.php?id=<?= $row['jenis_sampah']; ?>">
+                <button>
+                    <i class="fa fa-trash-o"></i>hapus
+                </button>
                 </a>
 
             </td>
