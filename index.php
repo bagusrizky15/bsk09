@@ -58,9 +58,9 @@ require 'system/config/koneksi.php'
 
   <!-- konten1 -->
   <div class="page-wrap">
+
     <div class="header">
       <div class="box-1">
-      
         <h3>Media Pengelola Bank Sampah</h3>
         <h1 disabled>Bener Ramah Lingkungan</h1>
         <p> Lingkungan rumah menjadi bersih dari sampah <br>
@@ -69,18 +69,20 @@ require 'system/config/koneksi.php'
           Di sisi lain, bank sampah dapat menambah <br>
           penghasilan bagi para nasabahnya.
         </p>
-        <br> 
         <br>
-
+        <br>
         <div class="left">
           <a href="page/login.php">
             <div class="btn" align="center">Login</div>
           </a> <!-- End Btn -->
         </div>
       </div>
-
+      <div class="box-2">
+        <img src="asset/internal/img/img-local/box2.png" alt="">
+      </div>
     </div>
   </div>
+
   </div>
 
 
@@ -97,6 +99,7 @@ require 'system/config/koneksi.php'
             akibat pembakaran sampah, dan tanah menjadi lebih subur karena tidak tercemar oleh sampah yang tidak dapat
             terurai. Si sisi lain, bank sampah dapat menambah penghasilan bagi para nasabahnya.</p>
         </div>
+
         <div class="row mgt50px">
           <div class="coloumn">
             <div class="imgBox">
