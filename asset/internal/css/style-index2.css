@@ -153,14 +153,13 @@ Preloader Area CSS Code
 
 /* footer */
 .footer-distributed{
-  background-color: #262626;
+  background: url(../img/img-local/bg-footer.png) no-repeat;
   box-sizing: border-box;
+  background-position: center;
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-
   padding: 50px 50px;
-  margin-top: 0;
 }
 
 .footer-distributed .footer-left,
