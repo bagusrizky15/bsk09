@@ -155,10 +155,11 @@ Preloader Area CSS Code
 .footer-distributed{
   background: url(../img/img-local/bg-footer.png) no-repeat;
   box-sizing: border-box;
-  background-position: center;
+  background-size: auto;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
   padding: 50px 50px;
 }
 
@@ -170,22 +171,8 @@ Preloader Area CSS Code
 }
 
 /* Footer left */
-
 .footer-distributed .footer-left{
   width: 40%;
-}
-
-/* The company logo */
-
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px 'Cookie', cursive;
-  margin: 0;
-}
-
-.footer-distributed h3 span{
-  font-family: Montserrat;
-  color:  #5383d3;
 }
 
 /* Footer links */
