@@ -55,7 +55,7 @@
             <td><img src="../asset/internal/img/uploads/<?php echo $row['gambar'] ?>" width="100px" height="50px"></td>
             <td><?php echo $row['deskripsi'] ?></td>
             <td>
-
+                
                 <a href="admin.php?page=edit-sampah&id=<?= $row['id']; ?>">
                 <button>
                     <i class="fa fa-pencil"></i>edit
