@@ -20,7 +20,7 @@ require 'system/config/koneksi.php'
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $(".preloader").fadeOut();
     })
   </script>
@@ -60,18 +60,25 @@ require 'system/config/koneksi.php'
   <div class="page-wrap">
     <div class="header">
       <div class="box-1">
-        <h1 disabled>BERAMAL</h1>
-        <p> BENER RAMAH LINGKUNGAN BANK SAMPAH </p>
-        <br> <br>
+      
+        <h3>Media Pengelola Bank Sampah</h3>
+        <h1 disabled>Bener Ramah Lingkungan</h1>
+        <p> Lingkungan rumah menjadi bersih dari sampah <br>
+          anorganik, juga akan lebih sehat karena <br>
+          mengurangi perkembangbiakan penyakit. <br>
+          Di sisi lain, bank sampah dapat menambah <br>
+          penghasilan bagi para nasabahnya.
+        </p>
+        <br> 
+        <br>
 
-        <div class="center">
+        <div class="left">
           <a href="page/login.php">
             <div class="btn" align="center">Login</div>
           </a> <!-- End Btn -->
-
-
         </div>
       </div>
+
     </div>
   </div>
   </div>
@@ -83,7 +90,12 @@ require 'system/config/koneksi.php'
       <div class="container">
         <div class="row">
           <h1>TERTARIK BERGABUNG ???</h1>
-          <p>BERAMAL (Bener Ramah Lingkungan) adalah sebuah wadah masyarakat dalam pengelolaan sampah di Kampung Bener Yogyakarta. Salah satu program dari BERAMAL adalalah Bank Sampah. Bank sampah berpotensi menurunkan hingga setengah dari produksi sampah anorganik. Selain lingkungan rumah menjadi bersih dari sampah anorganik, juga akan lebih sehat karena mengurangi perkembangbiakan penyakit seperti Demam Berdarah, mengurangi polusi udara akibat pembakaran sampah, dan tanah menjadi lebih subur karena tidak tercemar oleh sampah yang tidak dapat terurai. Si sisi lain, bank sampah dapat menambah penghasilan bagi para nasabahnya.</p>
+          <p>BERAMAL (Bener Ramah Lingkungan) adalah sebuah wadah masyarakat dalam pengelolaan sampah di Kampung Bener
+            Yogyakarta. Salah satu program dari BERAMAL adalalah Bank Sampah. Bank sampah berpotensi menurunkan hingga
+            setengah dari produksi sampah anorganik. Selain lingkungan rumah menjadi bersih dari sampah anorganik, juga
+            akan lebih sehat karena mengurangi perkembangbiakan penyakit seperti Demam Berdarah, mengurangi polusi udara
+            akibat pembakaran sampah, dan tanah menjadi lebih subur karena tidak tercemar oleh sampah yang tidak dapat
+            terurai. Si sisi lain, bank sampah dapat menambah penghasilan bagi para nasabahnya.</p>
         </div>
         <div class="row mgt50px">
           <div class="coloumn">
@@ -135,7 +147,9 @@ require 'system/config/koneksi.php'
       <h1 align="center">Lokasi Bank Sampah</h1>
       <br>
       <br>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7906.271832592935!2d110.34985657422243!3d-7.775409477585481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a586aaf61cbf1%3A0xed59773d37f91c28!2sBener%2C%20Tegalrejo%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1644446298849!5m2!1sen!2sid" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7906.271832592935!2d110.34985657422243!3d-7.775409477585481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a586aaf61cbf1%3A0xed59773d37f91c28!2sBener%2C%20Tegalrejo%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1644446298849!5m2!1sen!2sid"
+        width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
 
@@ -145,14 +159,14 @@ require 'system/config/koneksi.php'
     <div class="footer-left">
 
       <p class="footer-links">
-      <ul>
-        <a href="#">Beranda</a>
-        ·
-        <a href="#foo">Petunjuk</a>
-        ·
-        <a href="#baz">Lokasi</a>
-        </p>
-        <p class="footer-company-name">&copy; BERAMAL2022</p>
+        <ul>
+          <a href="#">Beranda</a>
+          ·
+          <a href="#foo">Petunjuk</a>
+          ·
+          <a href="#baz">Lokasi</a>
+      </p>
+      <p class="footer-company-name">&copy; BERAMAL2022</p>
     </div>
 
     <div class="footer-center">
@@ -177,7 +191,7 @@ require 'system/config/koneksi.php'
     <div class="footer-right">
 
       <p class="footer-company-about">
-     Kunjungi Sosial Media Kami!
+        Kunjungi Sosial Media Kami!
       </p>
 
       <div class="footer-icons">

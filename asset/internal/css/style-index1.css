@@ -1,5 +1,3 @@
-/*navbar*/
-
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
@@ -64,11 +62,9 @@ nav {
   font-family: 'Open Sans', sans-serif;
 }
 
-
-
 /*konten1*/
 .page-wrap {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .header::after {
@@ -83,15 +79,7 @@ nav {
   z-index: 2;
   display: flex;
   flex-flow: column;
-  justify-content: center;
   position: relative;
-}
-
-
-.center{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 
 .btn{
@@ -116,37 +104,25 @@ nav {
   color: #fff;
 }
 
-#btn2{
-  float:left;
-  background:#9be729;
-  width:200px;
-  height: 45px;  
-  padding-top:10px;
-  padding-bottom:10px;
-  color: #fff;
-  border-radius:30px;
-  
-  margin-top:15px;
-  margin-left:10px;
-  font-weight:600;
-  font-size:16px;
-}
-
-#btn2:hover{ 
-background:#8cd91a;
-}
-
 .box-1 h1 {
-  text-align: center;
-  font-family: Montserrat;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
   font-size: 50px;
-  color: #fff;
+  color: #000;  
+  margin-left: 60px;
 }
 
 .box-1 p{
-  text-align: center;
-  font-family: raleway;
-  color: #fff;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  margin-left: 60px;
   font-size: 20px;  
+}
+
+.left{
+    position: absolute;
+    left: 10%;
+    transform: translate(-50%,-50%);
 }
 
