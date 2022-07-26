@@ -6,6 +6,11 @@ body{
 	font-family: sans-serif;
 }
 
+.nav ul li {
+	list-style: none; 
+	display: inline
+}
+
 .loginBox{
 	position: absolute;
 	top: 50%;
