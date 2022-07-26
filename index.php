@@ -53,10 +53,6 @@ require 'system/config/koneksi.php'
         </li>
         <li style="list-style: none; display: inline"></li>
         <li>
-          <a href="#bar">Tim Kami</a>
-        </li>
-        <li style="list-style: none; display: inline"></li>
-        <li>
           <a href="#baz">Lokasi</a>
         </li>
         <li style="list-style: none; display: inline"></li>
