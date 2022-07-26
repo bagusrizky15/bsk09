@@ -103,13 +103,14 @@ nav {
   float: left;
   width: 50%;
   padding: 10px;
-  margin: 100px;
+  margin: 90px;
 }
 
 .box-2 {
   width: 50%;
   padding: 10px 10px 10px 10px 0;
   float: left;
+  margin-top: 60px;
 }
 
 .box-1 h3 {
