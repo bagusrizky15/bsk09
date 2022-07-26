@@ -47,10 +47,10 @@ require 'system/config/koneksi.php'
           <a href="#">Beranda</a>
         </li>
         <li>
-          <a href="#foo">Petunjuk</a>
+          <a href="#petunjuk">Petunjuk</a>
         </li>
         <li>
-          <a href="#baz">Lokasi</a>
+          <a href="#lokasi">Lokasi</a>
         </li>
       </ul>
     </nav>
@@ -85,7 +85,7 @@ require 'system/config/koneksi.php'
   </div>
 
   <!--konten2-->
-  <div class="space">
+  <div id="petunjuk">
     <br>
     <br>
   </div>
@@ -139,8 +139,11 @@ require 'system/config/koneksi.php'
   <script src="asset/internal/js/index.js"></script>
 
   <!--Konten Maps-->
-  <br>
-  <div id="bar">
+  <div id="lokasi">
+    <br>
+    <br>
+  </div>
+  <div id="baz">
     <div class="row mgt50px">
       <h1>Lokasi Bank Sampah</h1>
       <br>
@@ -155,13 +158,7 @@ require 'system/config/koneksi.php'
   <footer class="footer-distributed">
 
     <div class="footer-left">
-      <p class="footer-links">
-        <ul>
-          <a href="#">Beranda</a>
-          <a href="#foo">Petunjuk</a>
-          <a href="#baz">Lokasi</a>
-      </p>
-      <p class="footer-company-name">&copy;BERAMAL2022</p>
+      <p class="footer-company-name">Copyright&copy;BERAMAL2022</p>
     </div>
 
     <div class="footer-center">
@@ -173,12 +170,12 @@ require 'system/config/koneksi.php'
 
       <div>
         <i class="fa fa-phone"></i>
-        <p><a href="#">(+62)85 878 221 00</a></p>
+        <p>(+62)85 878 221 00</p>
       </div>
 
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="#">beramal@gmail.com</a></p>
+        <p>beramal@gmail.com</p>
       </div>
 
     </div>

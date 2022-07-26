@@ -59,6 +59,7 @@ Preloader Area CSS Code
 .mgt50px{
   margin-top: 50px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .row .coloumn{
@@ -145,7 +146,8 @@ Preloader Area CSS Code
   float: left;
 }
 
-#bar {
+#baz {
+  margin-top: 20px;
   margin-left: 10%;
   position: relative;
   width: 80%;
@@ -175,24 +177,8 @@ Preloader Area CSS Code
   width: 40%;
 }
 
-/* Footer links */
-
-.footer-distributed .footer-links{
-  color:  #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer-distributed .footer-links a{
-  font-family: Montserrat;
-  display:inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color:  inherit;
-}
-
 .footer-distributed .footer-company-name{
-  color:  #8f9296;
+  color:  #fff;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
@@ -223,27 +209,12 @@ Preloader Area CSS Code
 }
 
 .footer-distributed .footer-center p{
-  font-family: Montserrat;
+  font-family: 'Open Sans', sans-serif;
   display: inline-block;
   color: #ffffff;
   vertical-align: middle;
   margin:0;
 }
-
-.footer-distributed .footer-center p span{
-  font-family: Montserrat;
-  display:block;
-  font-weight: normal;
-  font-size:14px;
-  line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-  font-family: Montserrat;
-  color:  #5383d3;
-  text-decoration: none;;
-}
-
 
 /* Footer Right */
 
@@ -253,18 +224,10 @@ Preloader Area CSS Code
 
 .footer-distributed .footer-company-about{
   line-height: 20px;
-  color:  #92999f;
+  color:  #fff;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-  display: block;
-  color:  #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .footer-distributed .footer-icons{
@@ -276,7 +239,6 @@ Preloader Area CSS Code
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color:  #33383b;
   border-radius: 2px;
 
   font-size: 20px;
