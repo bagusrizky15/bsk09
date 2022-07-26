@@ -7,14 +7,6 @@ body{
   background: #fff;
 }
 
-
-/* text */
-.team{
-  padding: 50px 0;
-  height: 100vh;
-  box-sizing: border-box;
-}
-
 .container{
   width: 80%;
   margin: 50px auto;
@@ -26,27 +18,21 @@ body{
   box-sizing: border-box;
 }
 
+.row img {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.space {
+  margin: 20px;
+}
+
 .row h1{
-  color: #262626;
-  text-align: center;
-  font-family: Montserrat;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  font-size: 55px;
-  text-transform: uppercase;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  color: #50AF5D;
 }
-
-.row p{
-  margin:20px 0 0;
-  color: #262626;
-  padding-left: 20px;
-  border-left: 5px solid #8cd91a;
-  text-align: justify;
-  font-family: Raleway;
-  font-size: 18px;
-}
-
 
 /*---------------------------
 Preloader Area CSS Code  
@@ -60,6 +46,7 @@ Preloader Area CSS Code
   z-index: 9999;
   background-color: #fff;
 }
+
 .preloader .loading {
   position: absolute;
   left: 50%;
@@ -68,10 +55,10 @@ Preloader Area CSS Code
   font: 14px arial;
 }
 
-
 /* ---img-grid--- */
 .mgt50px{
   margin-top: 50px;
+  width: 100%;
 }
 
 .row .coloumn{
@@ -104,10 +91,11 @@ Preloader Area CSS Code
 
 .row .coloumn .imgBox{
   position: relative;
+  align-items: center;
 }
 
 .row .coloumn .imgBox img{
-  width: 100%;
+  width: 250px;
   transition: 5s;
 }
 
@@ -136,8 +124,7 @@ Preloader Area CSS Code
   padding: 5px 10px 0 0;
   color: #fff;
   font-weight: 500;
-  text-align: right;
-  text-transform: uppercase;
+  text-align: left;
 }
 
 .row .coloumn .details h3 span{
@@ -155,7 +142,13 @@ Preloader Area CSS Code
   margin: 0;
   padding: 0;
   direction: flex;
-  float: right;
+  float: left;
+}
+
+#bar {
+  margin-left: 10%;
+  position: relative;
+  width: 80%;
 }
 
 /* footer */
