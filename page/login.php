@@ -12,25 +12,21 @@
 
 <body>
 	<div class="loginBox">
-		<h1>MASUK DISINI</h1>
+		<h1>Sign In</h1>
 		<form action="cek_login.php" method="post">
 			<div class="inputBox">
-				<input type="text" name="user" autocomplete="off" placeholder="Masukan nomor induk">
 				<span><i class="fa fa-user" aria-hidden="true"></i></span>
+				<input type="text" name="user" autocomplete="off" placeholder="Masukan nomor induk">
 				</input>
 			</div>
 			<div class="inputBox">
-				<input type="password" name="pass" autocomplete="off" placeholder="Masukan password">
 				<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+				<input type="password" name="pass" autocomplete="off" placeholder="Masukan password">
 				</input>
 			</div>
 			<input type="submit" name="login" value="Login">
 		</form>
-		<a href="#">Lupa Password?</a>
-		<br>
-		<center>
-			<p>Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a></p>
-		</center>
+		<a href="#">Belum punya akun? <span>Daftar disini</span></a>
 	</div>
 </body>
 
