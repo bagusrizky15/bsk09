@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../datatables/css/jquery.dataTables.css">
 	<style>
 		label{
-        font-family: Montserrat;    
+        font-family: 'Open Sans';    
         font-size: 18px;
         display: block;
         color: #262627;
@@ -20,7 +20,7 @@
 	<table id="example" class="display" cellspacing="0" width="100%" border="0" >
         <thead>
         <tr>
-            <th>ID</th>
+            
             <th>Tanggal</th>
             <th>NIN</th>
             <th>Jenis Sampah</th>
@@ -33,7 +33,7 @@
         </thead>
         <tfoot>
         <tr>
-            <th>ID</th>
+            
             <th>Tanggal</th>
             <th>NIN</th>
             <th>Jenis Sampah</th>
@@ -50,21 +50,21 @@
             while($row = mysqli_fetch_assoc($query)){
         ?>
         <tr align="center">
-            <td><?php echo $row['id_setor'] ?></td>
-            <td><?php echo $row['tanggal_setor'] ?></td>
-            <td><?php echo $row['nin'] ?></td>
-            <td><?php echo $row['jenis_sampah'] ?></td>
-            <td><?php echo number_format($row['berat'])." Kg"  ?></td>
-            <td><?php echo "Rp. ".number_format($row['harga'], 2, ",", ".")  ?></td>
-            <td><?php echo "Rp. ".number_format($row['total'], 2, ",", ".")  ?></td>
-            <td><?php echo $row['nia'] ?></td>
+            
+            <td><?= $row['tanggal_setor'] ?></td>
+            <td><?= $row['nin'] ?></td>
+            <td><?= $row['jenis_sampah'] ?></td>
+            <td><?= number_format($row['berat'])." Kg"  ?></td>
+            <td><?= "Rp. ".number_format($row['harga'], 2, ",", ".")  ?></td>
+            <td><?= "Rp. ".number_format($row['total'], 2, ",", ".")  ?></td>
+            <td><?= $row['nia']?></td>
             <td>
                 
-                <a href="admin.php?page=edit-setor&id=<?php echo $row['id_setor']; ?>">
+                <a href="admin.php?page=edit-setor&id=<?= $row['id_setor']; ?>">
                 <button><i class="fa fa-pencil"></i>edit</button> 
                 </a>
 
-                <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-setor.php?id=<?php echo $row['id_setor']; ?>">
+                <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-setor.php?id=<?= $row['id_setor']; ?>">
                 <button><i class="fa fa-trash-o"></i>hapus</button>
                 </a>
 

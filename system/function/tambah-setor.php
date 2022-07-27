@@ -28,13 +28,11 @@
 	<script type="text/javascript" src="../asset/plugin/datepicker/js/jquery.plugin.js"></script> 
 	<script type="text/javascript" src="../asset/plugin/datepicker/js/jquery.datepick.js"></script>
 	
-
-
   <!--link datatables-->
     <style>
 
         label{
-        font-family: Montserrat;    
+        font-family: 'Open Sans';    
         font-size: 18px;
         display: block;
         color: #262626;
@@ -71,7 +69,7 @@
         }
 
         input, select{
-            font-family: Montserrat;
+            font-family: 'Open Sans';
             font-size: 16px;
         }
 
@@ -132,6 +130,7 @@ function cek_data() {
   }
    return true;
 }
+
 </script>
 	<script>
 	$(document).ready(function(){ // Ketika halaman sudah diload dan siap
@@ -157,7 +156,9 @@ function cek_data() {
 				
 				"<div class='form-group'><label class=''>Total (Rp)</label><input type='text' placeholder='Otomatis terisi' style='cursor: not-allowed;' id='total'  name='total' readonly /></div>" +
 				
-				"<br><br>");
+				"<br>
+        <br>"
+        );
 
 			
 			$("#jumlah-form").val(nextform); // Ubah value textbox jumlah-form dengan variabel nextform
@@ -167,7 +168,6 @@ function cek_data() {
 		$("#btn-reset-form").click(function(){
 			$("#insert-form").html(""); // Kita kosongkan isi dari div insert-form
 			$("#jumlah-form").val("1"); // Ubah kembali value jumlah form menjadi 1
-			
 		});
 	});
 	</script>  
@@ -176,31 +176,38 @@ function cek_data() {
 
 <body>
 		<h2 style="font-size: 30px; color: #262626;">Setor Sampah</h2>
-		<button type="button" id="btn-tambah-form">Tambah Data Form</button>
-		<button type="button" id="btn-reset-form">Reset Form</button><br><br>
+		<button type="button" id="btn-tambah-form">Tambah</button>
+		<button type="button" id="btn-reset-form">Reset</button>  
+    <br>
+    <br>
      <form id="daftar_user" name='autoSumForm' action="" method="post" onsubmit="return cek_data()">
          
          <div class="form-group">
           <label class="text-left">Tanggal Penyetoran</label>
           <input type="text" placeholder="Masukan tanggal setor" id="date"  name="tanggal_setor" />
-			<script type="text/javascript">  $('#date').datepick({dateFormat: 'yyyy-mm-dd'});</script>	
+    			<script type="text/javascript">  $('#date').datepick({dateFormat: 'yyyy-mm-dd'});</script>	
          </div>
 
          <div class="form-group">
           <label class="">Nomor Induk Nasabah</label>
-          <select class="nomornasabah" name="nin" >
-
+          <select class="nomornasabah" name="nin" id="nin" onchange="changeValue(this.value)">
           <option value="pnin">---Pilih NIN---</option>
-          
           <?php 
             $query = mysqli_query($conn, "SELECT * FROM nasabah");
+           // $jsArrayn = "var dtnasabah = new Array;\n";
             while ($row = mysqli_fetch_array($query)) {
               echo '<option value="' . $row['nin'] . '">' . $row['nin'] . '</option>';
+             // $jsArrayn .= "dtnasabah['" . $row['nin'] . "'] = {nama:'" . addcslashes($row['nama']) . "';\n";
             }
           ?>
 
           </select>
          </div>
+
+         <!-- <div class="form-group">
+          <label class="">Nama Nasabah</label>
+          <input type="text" placeholder="Nama Nasabah" id="nama" name="nama" value="<?= $row['nama'] ?>" readonly/>
+         </div> -->
 
          <div class="form-group">
           <label class="">Jenis Sampah</label>
