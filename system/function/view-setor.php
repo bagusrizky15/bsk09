@@ -27,7 +27,7 @@
             <th>Berat</th>
             <th>Harga</th>
             <th>Total</th>
-            <th>nia</th>
+            <!-- <th>nia</th> -->
             <th>Aksi</th>
         </tr>
         </thead>
@@ -40,7 +40,7 @@
             <th>Berat</th>
             <th>Harga</th>
             <th>Total</th>
-            <th>nia</th>
+            <!-- <th>nia</th> -->
             <th>Aksi</th>       
         </tr>   
         </tfoot>
@@ -57,7 +57,7 @@
             <td><?= number_format($row['berat'])." Kg"  ?></td>
             <td><?= "Rp. ".number_format($row['harga'], 2, ",", ".")  ?></td>
             <td><?= "Rp. ".number_format($row['total'], 2, ",", ".")  ?></td>
-            <td><?= $row['nia']?></td>
+            <!-- <td><?= $row['nia']?></td> -->
             <td>
                 
                 <a href="admin.php?page=edit-setor&id=<?= $row['id_setor']; ?>">

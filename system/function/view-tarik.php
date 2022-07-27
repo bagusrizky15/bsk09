@@ -26,7 +26,7 @@
             <th>NIN</th>
             <th>Saldo</th>
             <th>Jumlah Tarik</th>
-            <th>nia</th>
+            <!-- <th>nia</th> -->
             <th>Aksi</th>
         </tr>
         </thead>
@@ -38,7 +38,7 @@
             <th>NIN</th>
             <th>Saldo</th>
             <th>Jumlah Tarik</th>
-            <th>nia</th>
+            <!-- <th>nia</th> -->
             <th>Aksi</th>       
         </tr>   
         </tfoot>
@@ -55,7 +55,7 @@
             <td><?php echo $row['nin'] ?></td>
             <td><?php echo "Rp. ".number_format($row['saldo'], 2, ",", ".")  ?></td>
             <td><?php echo "Rp. ".number_format($row['jumlah_tarik'], 2, ",", ".")  ?></td>
-            <td><?php echo $row['nia'] ?></td>
+            <!-- <td><?php echo $row['nia'] ?></td> -->
             <td>
                 
                 <a href="a">
