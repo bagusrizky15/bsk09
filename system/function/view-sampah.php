@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../datatables/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="../datatables/css/view-sampah.css">
     <style>
         label{
         font-family: Montserrat;    
@@ -52,7 +53,7 @@
             <td><?php echo $row['jenis_sampah'] ?></td>
             <td><?php echo $row['satuan'] ?></td>
             <td><?php echo "Rp. ".number_format($row['harga'], 2, "," , ".")  ?></td>
-            <td><img src="../asset/internal/img/uploads/<?php echo $row['gambar'] ?>" width="100px" height="50px"></td>
+            <td class="image"><img src="../asset/internal/img/uploads/<?php echo $row['gambar'] ?>" width="100px" height="50px"></td>
             <td><?php echo $row['deskripsi'] ?></td>
             <td>
                 
@@ -69,6 +70,11 @@
                 </button>
                 </a>
 
+            </td>
+
+            <td class="popup-image">
+                <span>&times;</span>
+                <img src="../asset/internal/img/uploads/<?php echo $row['gambar'] ?>">
             </td>
         </tr>
         <?php } ?>
@@ -95,6 +101,18 @@
         $(document).ready(function() {
            $('#example').DataTable();
         } );
+
+        document.querySelectorAll('.image img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+            
+        }
+        });
     </script>
     </body>
 </html>
