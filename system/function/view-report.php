@@ -25,7 +25,7 @@
     },
     yAxis: {
         title: {
-            text: 'Jumlah per jiwa'
+            text: 'Jumlah orang'
         },
         labels: {
             formatter: function () {

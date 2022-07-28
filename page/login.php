@@ -26,7 +26,7 @@
 			</div>
 			<input type="submit" name="login" value="Login">
 		</form>
-		<a href="#">Belum punya akun? <span>Daftar disini</span></a>
+		<!-- <a href="#">Belum punya akun? <span>Daftar disini</span></a> -->
 	</div>
 </body>
 

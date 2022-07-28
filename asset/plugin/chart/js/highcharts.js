@@ -2172,7 +2172,7 @@
                     color: "#999999",
                     fontSize: "9px"
                 },
-                text: "Highcharts.com"
+                text: " "
             }
         };
         a.setOptions = function (f) {
