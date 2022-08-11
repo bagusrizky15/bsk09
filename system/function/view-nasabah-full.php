@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Nasabah</title>
 	<link rel="stylesheet" type="text/css" href="../datatables/css/jquery.dataTables.css">
 	<style>
 		label{
@@ -24,7 +24,6 @@
             <th>RT</th>
             <th>Alamat</th>
             <th>Telepon</th>
-            <th>E-mail</th>
             <th>Saldo</th>
             <th>Sampah</th>
             <th>Aksi</th>
@@ -37,7 +36,6 @@
             <th>RT</th>
             <th>Alamat</th>
             <th>Telepon</th>
-            <th>E-mail</th>
             <th>Saldo</th>
             <th>Sampah</th>
             <th>Aksi</th>       
@@ -54,7 +52,6 @@
             <td><?php echo $row['rt'] ?></td>
             <td><?php echo $row['alamat'] ?></td>
             <td><?php echo $row['telepon'] ?></td>
-            <td><?php echo $row['email'] ?></td>
             <td>
               <?php
                         $saldonya = mysqli_query($conn, "SELECT SUM(total) AS totalsaldo FROM setor WHERE nin='".$row['nin']."'");

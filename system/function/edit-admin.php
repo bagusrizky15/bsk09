@@ -7,7 +7,7 @@
   $nia = $_POST['nia'];
   $password = $_POST['password'];
 
-  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$nia', password = '$password' WHERE nia='".@$_SESSION['nia']."' ";
+  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', ', password = '$password' WHERE nia='".@$_SESSION['nia']."' ";
   $queryact = mysqli_query($conn, $query);
   header("Location: admin.php");
  }
