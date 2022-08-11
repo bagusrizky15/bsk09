@@ -180,7 +180,7 @@ if (empty($_SESSION['user']) && empty($_SESSION['pass'])) {
 
 
 		<!-- Navbar -->
-		<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-info fixed-top" style="background-color: #50AF5D;">
+		<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #50AF5D;">
 			<!-- Container wrapper -->
 			<div class="container-fluid mx-3">
 				<!-- Toggle button -->
@@ -189,7 +189,7 @@ if (empty($_SESSION['user']) && empty($_SESSION['pass'])) {
 				</button>
 
 				<!-- Brand -->
-				<span class="navbar-brand text-white-50">Dashboard</span>
+				<span class="navbar-brand text-white">Dashboard</span>
 
 				<!-- Right links -->
 				<ul class="navbar-nav ms-auto d-flex flex-row">
