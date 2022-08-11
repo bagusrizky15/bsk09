@@ -26,7 +26,7 @@
 
 .popup-image span {
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 10px;
     margin-right: 50px;
     font-size: 40px;
