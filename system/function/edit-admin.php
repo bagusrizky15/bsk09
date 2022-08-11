@@ -7,7 +7,7 @@
   $nia = $_POST['nia'];
   $password = $_POST['password'];
 
-  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', ', password = '$password' WHERE nia='".@$_SESSION['nia']."' ";
+  $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', password = '$password' WHERE nia='".@$_SESSION['nia']."' ";
   $queryact = mysqli_query($conn, $query);
   header("Location: admin.php");
  }
@@ -79,10 +79,6 @@
          <div class="form-group">
           <label class="">Nomor Telepon</label>
           <input type="text" name="telepon" value="<?php echo $row['telepon'] ?>" required/>
-         </div>
-         <div class="form-group">
-          <label class="">E-mail</label>
-          <input type="text" name="nia" value="<?php echo $row['email'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Password</label>

@@ -66,8 +66,8 @@
                 <button><i class="fa fa-trash-o"></i>hapus</button>
                 </a>
 
-                <a href="#">
-                <button><i class="fa fa-print"></i>print</button>
+                <a target="_blank" href="../system/function/print-tarik-single.php?print=<?= $row['id_tarik']?>">
+                    <button><i class="fa fa-print"></i>print</button>
                 </a>
 
             </td>

@@ -27,7 +27,6 @@ error_reporting(0);
             <th>nia</th>
             <th>Nama Admin</th>
             <th>Nomor Telepon</th>
-            <th>E-mail</th>
             <th>Level</th>
             <th>Aksi</th>
         </tr>
@@ -38,7 +37,6 @@ error_reporting(0);
             <th>nia</th>
             <th>Nama Admin</th>
             <th>Nomor Telepon</th>
-            <th>E-mail</th>
             <th>Level</th>
             <th>Aksi</th>       
         </tr>   
@@ -54,7 +52,6 @@ error_reporting(0);
             <td><?php echo $row['nia'] ?></td>
             <td><?php echo $row['nama'] ?></td>
             <td><?php echo $row['telepon'] ?></td>
-            <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['level'] ?></td>
             <td>
                 
@@ -76,14 +73,6 @@ error_reporting(0);
     
     <a href="admin.php?page=tambah-data-admin">
     <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
-    </a>
-
-    <a target="_blank" href="../system/function/excel-admin.php">
-    <button><i class="fa fa-print" aria-hidden="true"></i>Excel</button>
-    </a>
-
-    <a target="_blank" href="../system/function/print-admin.php">
-    <button><i class="fa fa-print" aria-hidden="true"></i>Cetak</button>
     </a>
     
     <script type="text/javascript" src="../datatables/js/jquery.min.js"></script>
