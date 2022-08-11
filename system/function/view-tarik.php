@@ -66,7 +66,7 @@
                 <button><i class="fa fa-trash-o"></i>hapus</button>
                 </a>
 
-                <a href="../system/function/delete-tarik.php?id=<?php echo $row['id_tarik']; ?>">
+                <a href="#">
                 <button><i class="fa fa-print"></i>print</button>
                 </a>
 
