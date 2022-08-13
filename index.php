@@ -9,7 +9,7 @@ require 'system/config/koneksi.php'
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Beramal</title>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Contrail+One|Raleway" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -22,7 +22,7 @@ require 'system/config/koneksi.php'
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       $(".preloader").fadeOut();
     })
   </script>
@@ -75,7 +75,7 @@ require 'system/config/koneksi.php'
         <br>
         <div class="left">
           <a href="page/login.php">
-            <div class="btn" align="center">Login</div>
+            <div class="btn" align="center">Masuk</div>
           </a> <!-- End Btn -->
         </div>
       </div>
@@ -149,9 +149,7 @@ require 'system/config/koneksi.php'
     <div class="row mgt50px">
       <h1>Lokasi Bank Sampah</h1>
       <br>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7906.271832592935!2d110.34985657422243!3d-7.775409477585481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a586aaf61cbf1%3A0xed59773d37f91c28!2sBener%2C%20Tegalrejo%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1644446298849!5m2!1sen!2sid"
-        width="1500" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7906.271832592935!2d110.34985657422243!3d-7.775409477585481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a586aaf61cbf1%3A0xed59773d37f91c28!2sBener%2C%20Tegalrejo%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1644446298849!5m2!1sen!2sid" width="1500" height="600" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </div>
   </div>

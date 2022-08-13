@@ -12,7 +12,7 @@
 
 <body>
 	<div class="loginBox">
-		<h1>Sign In</h1>
+		<h1>Masuk</h1>
 		<form action="cek_login.php" method="post">
 			<div class="inputBox">
 				<span><i class="fa fa-user" aria-hidden="true"></i></span>
