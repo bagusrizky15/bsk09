@@ -132,7 +132,7 @@
             daftar_user.telepon.focus();
             return false;
          }
-         if (x.length != 10) {
+         if (x.length < 10) {
             alert("Nomor telepon minimal 10 karakter");
             daftar_user.telepon.focus();
             return false;
@@ -140,16 +140,6 @@
          var x = daftar_user.email.value;
          var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-         if (x == "") {
-            alert("Maaf harap input email!");
-            daftar_user.email.focus();
-            return false;
-         }
-         if (!x.match(cek_email)) {
-            alert("Format penulisan email tidak sesuai!");
-            daftar_user.email.focus();
-            return false;
-         }
          var x = daftar_user.password.value;
          var panjang = x.length;
 
