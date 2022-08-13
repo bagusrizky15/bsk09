@@ -14,7 +14,7 @@ require 'system/config/koneksi.php'
   <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-  <link rel="shortcut icon" href="asset/internal/img/img-local/favicon.ico">
+  <link rel="shortcut icon" href="asset/internal/img/img-local/favv.png">
   <link rel="stylesheet" href="asset/internal/css/style-index1.css">
   <link rel="stylesheet" href="asset/internal/css/style-index2.css">
 

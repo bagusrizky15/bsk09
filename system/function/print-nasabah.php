@@ -3,7 +3,7 @@
 
 <head>
   <title>Cetak PDF</title>
-  <link rel="shortcut icon" href="../../asset/internal/img/img-local/favicon.ico">
+  <link rel="shortcut icon" href="../../asset/internal/img/img-local/favv.png">
 
   <style>
     h1 {
@@ -58,26 +58,26 @@
 
 
     <?php
-// Load file koneksi.php
-require_once ('../config/koneksi.php');
- 
-$query = "SELECT * FROM nasabah"; // Tampilkan semua data gambar
-$sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
-$row = mysqli_num_rows($sql); // Ambil jumlah data dari hasil eksekusi $sql
-    
-    while($data = mysqli_fetch_array($sql)){// Ambil semua data dari hasil eksekusi $sql 
-      ?>
-    <tbody>
-      <tr>
-        <td><?php echo $data['nin'] ?></td>
-        <td><?php echo $data['nama'] ?></td>
-        <td><?php echo $data['alamat'] ?></td>
-        <td><?php echo $data['telepon'] ?></td>
-        <td><?php echo $data['email'] ?></td>
-        <td><?php echo "Rp. ".number_format($data['saldo'], 2, ",", ".")  ?></td>
-        <td><?php echo number_format($data['sampah'])." Kg"  ?></td>
-      </tr>
-    </tbody>
+    // Load file koneksi.php
+    require_once('../config/koneksi.php');
+
+    $query = "SELECT * FROM nasabah"; // Tampilkan semua data gambar
+    $sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
+    $row = mysqli_num_rows($sql); // Ambil jumlah data dari hasil eksekusi $sql
+
+    while ($data = mysqli_fetch_array($sql)) { // Ambil semua data dari hasil eksekusi $sql 
+    ?>
+      <tbody>
+        <tr>
+          <td><?php echo $data['nin'] ?></td>
+          <td><?php echo $data['nama'] ?></td>
+          <td><?php echo $data['alamat'] ?></td>
+          <td><?php echo $data['telepon'] ?></td>
+          <td><?php echo $data['email'] ?></td>
+          <td><?php echo "Rp. " . number_format($data['saldo'], 2, ",", ".")  ?></td>
+          <td><?php echo number_format($data['sampah']) . " Kg"  ?></td>
+        </tr>
+      </tbody>
 
     <?php } ?>
 

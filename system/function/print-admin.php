@@ -1,67 +1,71 @@
 <?php ob_start(); ?>
 <html>
+
 <head>
   <title>Cetak PDF</title>
-  <link rel="shortcut icon" href="../../asset/internal/img/img-local/favicon.ico">
-    
-   <style>
-   h1{
+  <link rel="shortcut icon" href="../../asset/internal/img/img-local/favv.png">
+
+  <style>
+    h1 {
       color: #262626;
-     }
-     table {
+    }
+
+    table {
       max-width: 960px;
       margin: 10px auto;
-     }
+    }
 
-      thead th {
-        font-weight: 400;
-        background: #8a97a0;
-        color: #FFF;
-      }
+    thead th {
+      font-weight: 400;
+      background: #8a97a0;
+      color: #FFF;
+    }
 
-      tr {
-        background: #f4f7f8;
-        border-bottom: 1px solid #FFF;
-        margin-bottom: 5px;
-      }
+    tr {
+      background: #f4f7f8;
+      border-bottom: 1px solid #FFF;
+      margin-bottom: 5px;
+    }
 
-      tr:nth-child(even) {
-        background: #e8eeef;
-      }
+    tr:nth-child(even) {
+      background: #e8eeef;
+    }
 
-      th, td {
-        text-align: center;
-        padding: 15px 20px;
-        font-weight: 300;
-      }
-   </style>
+    th,
+    td {
+      text-align: center;
+      padding: 15px 20px;
+      font-weight: 300;
+    }
+  </style>
 </head>
+
 <body>
-  
-<h1 align="center">LAPORAN DATA ADMINISTRATOR</h1>
-<table align="center" cellspacing="0">
-<thead>
-<tr>
-  <th>nia</th>
-  <th>NAMA</th>
-  <th>TELEPON</th>
-  <th>E-MAIL</th>
-  <th>LEVEL</th>
-</tr>
-</thead>
+
+  <h1 align="center">LAPORAN DATA ADMINISTRATOR</h1>
+  <table align="center" cellspacing="0">
+    <thead>
+      <tr>
+        <th>nia</th>
+        <th>NAMA</th>
+        <th>TELEPON</th>
+        <th>E-MAIL</th>
+        <th>LEVEL</th>
+      </tr>
+    </thead>
 
 
-<?php
-// Load file koneksi.php
-require_once ('../config/koneksi.php');
- 
-$query = "SELECT * FROM admin"; // Tampilkan semua data gambar
-$sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
-$row = mysqli_num_rows($sql); // Ambil jumlah data dari hasil eksekusi $sql
-    
-    while($data = mysqli_fetch_array($sql)){// Ambil semua data dari hasil eksekusi $sql 
-      ?>
-        <tbody>
+    <?php
+    // Load file koneksi.php
+    require_once('../config/koneksi.php');
+
+    $query = "SELECT * FROM admin"; // Tampilkan semua data gambar
+    $sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
+    $row = mysqli_num_rows($sql); // Ambil jumlah data dari hasil eksekusi $sql
+
+    while ($data = mysqli_fetch_array($sql)) { // Ambil semua data dari hasil eksekusi $sql 
+    ?>
+      <tbody>
         <tr>
           <td><?php echo $data['nia'] ?></td>
           <td><?php echo $data['nama'] ?></td>
@@ -69,16 +73,16 @@ $row = mysqli_num_rows($sql); // Ambil jumlah data dari hasil eksekusi $sql
           <td><?php echo $data['email'] ?></td>
           <td><?php echo $data['level'] ?></td>
         </tr>
-        </tbody>
+      </tbody>
 
-<?php } ?>
+    <?php } ?>
 
-</table>
+  </table>
 
-<script>
+  <script>
     window.print();
   </script>
 
 </body>
-</html>
 
+</html>
