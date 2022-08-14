@@ -17,7 +17,7 @@
         $format = "admin".$tambah;
     }
 
-    if(isset($_POST['simpan'])){
+    if(isset($_POST['daftar'])){
       $nia = $_POST['nia'];
       $nama = $_POST['nama'];
       $telepon = $_POST['telepon'];
