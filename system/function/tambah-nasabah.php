@@ -6,7 +6,7 @@
     $nin = mysqli_fetch_array($no);
     $kode = $nin['nin'];
 
-    $urut = substr($kode, 7, 3);
+    $urut = substr($kode, 7, 2);
     $tambah = (int) $urut + 1;
     $bln = date("m");
     $thn = date("y");
