@@ -106,8 +106,7 @@
           <input type="text" disabled="disabled" name="total" value="<?php echo $row['total'] ?>"/>
          </div>
          <div class="form-group">
-          <label class="">nia admin</label>
-          <input type="text" disabled="disabled" name="nia" value="<?php echo $row['nia'] ?>"/>
+          <input type="hidden" disabled="disabled" name="nia" value="<?php echo $row['nia'] ?>"/>
          </div>
 
 
