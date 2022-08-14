@@ -137,13 +137,11 @@
             daftar_user.telepon.focus();
             return false;
          }
-         var x = daftar_user.email.value;
-         var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-         var x = daftar_user.password.value;
+         var y = daftar_user.password.value;
          var panjang = x.length;
 
-         if (x == "") {
+         if (y == "") {
             alert("Maaf harap input password!");
             daftar_user.password.focus();
             return false;
@@ -169,10 +167,9 @@
 <body>
    <h2 style="font-size: 30px; color: #262626;">Tambah Data Administrator</h2>
 
-
    <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
       <div class="form-group">
-         <label class="text-left">nia admin</label>
+         <label class="text-left">nia</label>
          <input style="cursor: not-allowed;" type="text" name="nia" value="<?php echo $format; ?>" readonly />
       </div>
 
