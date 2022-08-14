@@ -58,7 +58,7 @@
                         $tariknya = mysqli_query($conn, "SELECT SUM(jumlah_tarik) AS totaltarik FROM tarik WHERE nin='".$row['nin']."'");
                         $var_saldo = mysqli_fetch_array($saldonya);$var_tarik = mysqli_fetch_array($tariknya);
                         $tot_saldo_total=($var_saldo['totalsaldo'])-($var_tarik['totaltarik']);
-                       $saldoakhir = mysqli_query($conn, 
+                        $saldoakhir = mysqli_query($conn, 
                         "update nasabah SET saldo=$tot_saldo_total WHERE nin='".$row['nin']."'");                    
               ?>                    
                 <?php echo "Rp. ".number_format($row['saldo'], 2, ",", ".")  ?></td>
@@ -70,7 +70,8 @@
                     $beratakhir = mysqli_query($conn, 
                     "update nasabah SET sampah=$sampahnya WHERE nin='".$row['nin']."'");
               ?>               
-                <?php echo number_format($row['sampah'])." Kg"  ?></td>
+                <?php echo number_format($row['sampah'])." Kg"  ?>
+            </td>
             <td>
 
                 <a href="admin.php?page=edit-nasabah-id&id=<?php echo $row['nin']; ?>">
