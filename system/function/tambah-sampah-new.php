@@ -1,20 +1,17 @@
 <?php
 
-require_once("../system/config/koneksi.php");
-
  if(isset($_POST['simpan'])) {
-
+  require_once("../system/config/koneksi.php");
   $jenis_sampah = $_POST['jenis_sampah'];
   $satuan = $_POST['satuan'];
   $harga = $_POST['harga'];
+  $namaFile = $_FILES['gambar']['name'];
+  $tmpName = $_FILES['gambar']['tmpName'];
   $gambar = $_FILES['gambar'];
   $deskripsi = $_POST['deskripsi'];
   $folder = '../asset/internal/img/uploads/';
-
-  $namaFile = $_FILES['gambar']['name'];
   $ukuranFile = $_FILES['gambar']['size'];
   $error = $_FILES['gambar']['error'];
-  $tmpName = $_FILES['gambar']['tmpName'];
 
   //cek gambar yang di upload
 
@@ -88,7 +85,6 @@ require_once("../system/config/koneksi.php");
  }
 
  ?>
-
 
 <html>
 

@@ -124,7 +124,7 @@
 		<form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
 			<div class="inputBox">
 				<label class="left">Username</label>
-				<input style="cursor: not-allowed;" type="text" name="nia" value="<?php echo $format; ?>" readonly>
+				<input type="text" name="nia" value="<?php echo $format; ?>">
 				</input>
 			</div>
 			<div class="inputBox">
