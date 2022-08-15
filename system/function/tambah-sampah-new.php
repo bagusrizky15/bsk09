@@ -55,7 +55,6 @@
   $namaFileBaru .= $ekstensiGambar;
 
   move_uploaded_file( $tmpName, $folder.$namaFileBaru);
-  return $namaFileBaru;
 
   $query = "INSERT INTO sampah VALUES 
   ('','$jenis_sampah','$satuan','$harga','$namaFileBaru','$deskripsi')";
