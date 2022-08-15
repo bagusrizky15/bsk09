@@ -1,52 +1,52 @@
 <?php
 
- require_once("../system/config/koneksi.php");
+require_once("../system/config/koneksi.php");
 
-    $no = mysqli_query($conn, "SELECT nia FROM admin ORDER BY nia DESC");
-    $nia = mysqli_fetch_array($no);
-    $kode = $nia['nia'];
+$no = mysqli_query($conn, "SELECT nia FROM admin ORDER BY nia DESC");
+$nia = mysqli_fetch_array($no);
+$kode = $nia['nia'];
 
-    $urut = substr($kode, 7, 2);
-    $tambah = (int) $urut + 1;
-    $bln = date("m");
-    $thn = date("y");
+$urut = substr($kode, 7, 2);
+$tambah = (int) $urut + 1;
+$bln = date("m");
+$thn = date("y");
 
-    if(strlen($tambah) == 1){
-        $format = "admin"."0".$tambah;
-    }else{
-        $format = "admin".$tambah;
-    }
+if (strlen($tambah) == 1) {
+   $format = "admin" . "0" . $tambah;
+} else {
+   $format = "admin" . $tambah;
+}
 
-    if(isset($_POST['simpan'])){
-      $nia = $_POST['nia'];
-      $nama = $_POST['nama'];
-      $telepon = $_POST['telepon'];
-      $password = $_POST['password'];
-      $level = $_POST['level'];
+if (isset($_POST['simpan'])) {
+   $nia = $_POST['nia'];
+   $nama = $_POST['nama'];
+   $telepon = $_POST['telepon'];
+   $password = $_POST['password'];
+   $level = $_POST['level'];
 
-      $sql = mysqli_query($conn, "SELECT * FROM admin WHERE nia = '$nia'");
+   $sql = mysqli_query($conn, "SELECT * FROM admin WHERE nia = '$nia'");
 
-      if (mysqli_fetch_array($sql) > 0) {
-        echo "<script>
+   if (mysqli_fetch_array($sql) > 0) {
+      echo "<script>
                 alert('Maaf akun sudah terdaftar!');
               </script>";
 
-              echo "<meta http-equiv='refresh'
+      echo "<meta http-equiv='refresh'
               content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-admin-full'>";
 
-              return FALSE;      
-      }
+      return FALSE;
+   }
 
-      mysqli_query($conn, "INSERT INTO admin VALUES ('$nia','$nama','$telepon','$password','$level')");
+   mysqli_query($conn, "INSERT INTO admin VALUES ('$nia','$nama','$telepon','$password','$level')");
 
-      echo "<script>
+   echo "<script>
                 alert('Selamat berhasil input data!');
               </script>";
 
-      echo "<meta http-equiv='refresh'
+   echo "<meta http-equiv='refresh'
       content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-admin-full'>";
-    }
- ?>
+}
+?>
 
 
 <html>
@@ -167,7 +167,7 @@
 <body>
    <h2 style="font-size: 30px; color: #262626;">Tambah Data Administrator</h2>
 
-   <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
+   <form id="daftar_user" action="" method="POST" onsubmit="return cek_data()">
       <div class="form-group">
          <label class="text-left">nia</label>
          <input type="text" name="nia" value="<?php echo $format; ?>" />

@@ -1,56 +1,56 @@
 <?php
-    error_reporting(0);
-    require_once("../system/config/koneksi.php");
 
-    $no = mysqli_query($conn, "SELECT nin FROM nasabah ORDER BY nin DESC");
-    $nin = mysqli_fetch_array($no);
-    $kode = $nin['nin'];
+require("../system/config/koneksi.php");
 
-    $urut = substr($kode, 7, 2);
-    $tambah = (int) $urut + 1;
-    $bln = date("m");
-    $thn = date("y");
+$no = mysqli_query($conn, "SELECT nin FROM nasabah ORDER BY nin DESC");
+$nin = mysqli_fetch_array($no);
+$kode = $nin['nin'];
 
-    if(strlen($tambah) == 1){
-        $format = "ID".$thn.$bln."00".$tambah;
-    }else if (strlen($tambah) == 2) {
-        $format = "ID".$thn.$bln."0".$tambah;
-    }else{
-        $format = "ID".$thn.$bln.$tambah;
-    }
+$urut = substr($kode, 7, 2);
+$tambah = (int) $urut + 1;
+$bln = date("m");
+$thn = date("y");
 
-    if(isset($_POST['simpan'])){
-      $nin = $_POST['nin'];
-      $nama = $_POST['nama'];
-      $rt = $_POST['rt'];
-      $alamat = $_POST['alamat'];
-      $telepon = $_POST['telepon'];
-      $saldo = $_POST['saldo'];
-      $sampah = $_POST['sampah'];
+if (strlen($tambah) == 1) {
+  $format = "ID" . $thn . $bln . "00" . $tambah;
+} else if (strlen($tambah) == 2) {
+  $format = "ID" . $thn . $bln . "0" . $tambah;
+} else {
+  $format = "ID" . $thn . $bln . $tambah;
+}
 
-      $sql = mysqli_query($conn, "SELECT * FROM nasabah WHERE nin = '$nin'");
+if (isset($_POST['simpan'])) {
+  $nin = $_POST['nin'];
+  $nama = $_POST['nama'];
+  $rt = $_POST['rt'];
+  $alamat = $_POST['alamat'];
+  $telepon = $_POST['telepon'];
+  $saldo = $_POST['saldo'];
+  $sampah = $_POST['sampah'];
 
-      if (mysqli_fetch_array($sql) > 0) {
-        echo "<script>
+  $sql = mysqli_query($conn, "SELECT * FROM nasabah WHERE nin = '$nin'");
+
+  if (mysqli_fetch_array($sql) > 0) {
+    echo "<script>
                 alert('Maaf akun sudah terdaftar');
               </script>";
 
-              echo "<meta http-equiv='refresh'
+    echo "<meta http-equiv='refresh'
               content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-nasabah-full'>";
 
-              return FALSE;      
-      }
+    return FALSE;
+  }
 
-      mysqli_query($conn, "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon','$email','$password','$saldo','$sampah')");
+  mysqli_query($conn, "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon','$saldo','$sampah')");
 
-      echo "<script>
+  echo "<script>
                 alert('Selamat berhasil input data!');
               </script>";
 
-      echo "<meta http-equiv='refresh'
-      content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-nasabah-full'>";
-    }
-  ?>
+  echo "<meta http-equiv='refresh'
+              content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-nasabah-full'>";
+}
+?>
 
 <html>
 
@@ -146,35 +146,7 @@
         alert("Maaf nomor telepon harus di input angka!");
         daftar_user.telepon.focus();
         return false;
-      }
-
-      //  var x=daftar_user.email.value;
-      //  var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-      //  if(x==""){
-      //     alert("Maaf harap input email!");
-      //     daftar_user.email.focus(); 
-      //     return false;
-      //  }
-      //  if(!x.match(cek_email)){
-      //     alert("Format penulisan email tidak sesuai!");
-      //     daftar_user.email.focus();
-      //     return false;
-      //  }
-      //  var x=daftar_user.password.value;
-      //  var panjang=x.length;
-
-      //  if(x==""){
-      //     alert("Maaf harap input password!");
-      //     daftar_user.password.focus(); 
-      //     return false;
-      //  }
-      //  if(panjang<6 || panjang>20){
-      //     alert("Password di input minimum 6 karakter dan maksimum 20 karakter!");
-      //     daftar_user.password.focus();
-      //     return false;
-      // }
-      else {
+      } else {
         confirm("Apakah Anda yakin sudah input data dengan benar?");
       }
       return true;
@@ -186,7 +158,7 @@
 <body>
   <h2 style="font-size: 30px; color: #262626;">Tambah Data Nasabah</h2>
 
-  <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
+  <form id="daftar_user" action="" method="POST" onsubmit="return cek_data()">
     <div class="form-group">
       <label class="text-left">Nomor Induk Nasabah</label>
       <input style="cursor: not-allowed;" type="text" name="nin" value="<?php echo $format; ?>" readonly />
