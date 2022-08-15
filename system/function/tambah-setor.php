@@ -156,8 +156,7 @@ function cek_data() {
 				
 				"<div class='form-group'><label class=''>Total (Rp)</label><input type='text' placeholder='Otomatis terisi' style='cursor: not-allowed;' id='total'  name='total' readonly /></div>" +
 				
-				"<br>
-        <br>"
+				"<br>"
         );
 
 			

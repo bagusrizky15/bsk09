@@ -83,7 +83,7 @@
     <br>
     <br>
     
-    <a href="admin.php?page=tambah-data-sampah">    
+    <a href="admin.php?page=tambah-data-sampah-baru">    
     <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
     </a>
 
