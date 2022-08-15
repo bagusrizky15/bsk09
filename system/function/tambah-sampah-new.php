@@ -2,13 +2,14 @@
 
 require_once("../system/config/koneksi.php");
 
- if (isset($_POST['simpan'])) {
+ if(isset($_POST['simpan'])) {
+
   $jenis_sampah = $_POST['jenis_sampah'];
   $satuan = $_POST['satuan'];
   $harga = $_POST['harga'];
   $gambar = $_FILES['gambar'];
-  $folder = '../asset/internal/img/uploads/';
   $deskripsi = $_POST['deskripsi'];
+  $folder = '../asset/internal/img/uploads/';
 
   $namaFile = $_FILES['gambar']['name'];
   $ukuranFile = $_FILES['gambar']['size'];
@@ -18,7 +19,7 @@ require_once("../system/config/koneksi.php");
   //cek gambar yang di upload
 
   if ($error === 4) {
-   echo "
+   echo"
    <script>
    alert('pilih gambar terlebih dahulu');
    </script>
@@ -32,7 +33,7 @@ require_once("../system/config/koneksi.php");
   $ekstensiGambar = explode('.', $namaFile);
   $ekstensiGambar = strtolower(end($ekstensiGambar));
 
-  if (in_array($ektensiGambar, $ekstensiGambarValid)) {
+  if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
    # code...
    echo "
    <script>
@@ -44,7 +45,6 @@ require_once("../system/config/koneksi.php");
   //cek ukuran gambar
 
   if ($ukuranFile > 2000000) {
-   # code...
    echo "
    <script>
    alert('ukuran maksimal gambar 2MB');
@@ -52,7 +52,13 @@ require_once("../system/config/koneksi.php");
    ";
   }
 
-  move_uploaded_file( $tmpName, $folder.$namaFile);
+  //generate nama gambar
+  $namaFileBaru = uniqid();
+  $namaFileBaru .= '.';
+  $namaFileBaru .= $ekstensiGambar;
+
+  move_uploaded_file( $tmpName, $folder.$namaFileBaru);
+  return $namaFileBaru;
 
   $query = "INSERT INTO sampah VALUES 
   ('','$jenis_sampah','$satuan','$harga','$gambar','$deskripsi')";
@@ -68,6 +74,7 @@ require_once("../system/config/koneksi.php");
 
         echo "<meta http-equiv='refresh'
               content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-sampah'>";
+
   }else{
     echo "
         <script>
@@ -87,7 +94,6 @@ require_once("../system/config/koneksi.php");
 
 <head>
    <title>Homepage</title>
-   <!--link datatables-->
    <style>
       label {
          font-family: Montserrat;
@@ -138,75 +144,12 @@ require_once("../system/config/koneksi.php");
       }
    </style>
 
-   <script type="text/javascript">
-      function cek_data() {
-         var x = daftar_user.jenis_sampah.value;
-         var x1 = parseInt(x);
-
-         if (x == "") {
-            alert("Maaf harap input jenis sampah!");
-            daftar_user.jenis_sampah.focus();
-            return false;
-         }
-         if (isNaN(x1) == false) {
-            alert("Maaf jenis sampah harus di input huruf!");
-            daftar_user.jenis_sampah.focus();
-            return false;
-         }
-         var p = daftar_user.satuan.value;
-         if (p == "p") {
-            alert("Maaf harap input satuan sampah!");
-            return (false);
-         }
-         var x = daftar_user.harga.value;
-         var angka = /^[0-9]+$/;
-         var panjang = x.length;
-
-         if (x == "") {
-            alert("Maaf harap input harga!");
-            daftar_user.harga.focus();
-            return false;
-         }
-         if (!x.match(angka)) {
-            alert("Maaf harga harus di input angka!");
-            daftar_user.harga.focus();
-            return false;
-         }
-         if (panjang < 3 || panjang > 5) {
-            alert("harga di input minimum 3 karakter dan maksimum 5 karakter!");
-            daftar_user.harga.focus();
-            return false;
-         }
-         if (daftar_user.gambar.value == "") {
-            alert("Maaf harap input gambar!");
-            daftar_user.gambar.focus();
-            return false;
-         }
-         var x = daftar_user.deskripsi.value;
-         var panjang = x.length;
-
-         if (x == "") {
-            alert("Maaf harap input deskripsi!");
-            daftar_user.deskripsi.focus();
-            return false;
-         }
-         if (panjang > 50) {
-            alert("deskripsi di input maksimum 50 karakter!");
-            daftar_user.deskripsi.focus();
-            return false;
-         } else {
-            confirm("Apakah Anda yakin sudah input data dengan benar?");
-         }
-         return true;
-      }
-   </script>
-
 </head>
 
 <body>
    <h2 style="font-size: 30px; color: #262626;">Tambah Data Sampah Baru</h2>
 
-   <form id="daftar_user" action="" method="post" enctype="multipart/form-data" onsubmit="return cek_data()">
+   <form action="" method="post" enctype="multipart/form-data">
       <div class="form-group">
          <label class="text-left">Jenis Sampah</label>
          <input type="text" placeholder="Masukan jenis sampah" name="jenis_sampah" autocomplete="off" />
@@ -229,7 +172,7 @@ require_once("../system/config/koneksi.php");
 
       <div class="form-group">
          <label class="">Gambar</label>
-         <input type="file" name="gambar" />
+         <input type="file" name="gambar" id="gambar" />
       </div>
 
       <div class="form-group">
