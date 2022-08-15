@@ -28,8 +28,31 @@ require_once("../system/config/koneksi.php");
 
   //cek upload gambar atau bukan
   
+  $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+  $ekstensiGambar = explode('.', $namaFile);
+  $ekstensiGambar = strtolower(end($ekstensiGambar));
 
-  move_uploaded_file($source, $folder.$nama_file);
+  if (in_array($ektensiGambar, $ekstensiGambarValid)) {
+   # code...
+   echo "
+   <script>
+   alert('upload gambar');
+   </script>
+   ";
+  }
+
+  //cek ukuran gambar
+
+  if ($ukuranFile > 2000000) {
+   # code...
+   echo "
+   <script>
+   alert('ukuran maksimal gambar 2MB');
+   </script>
+   ";
+  }
+
+  move_uploaded_file( $tmpName, $folder.$namaFile);
 
   $query = mysqli_query($conn,"INSERT INTO sampah VALUES ('','$jenis_sampah','$satuan','$harga','$nama_file','$deskripsi')");
   
