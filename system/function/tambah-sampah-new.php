@@ -58,11 +58,11 @@
   return $namaFileBaru;
 
   $query = "INSERT INTO sampah VALUES 
-  ('','$jenis_sampah','$satuan','$harga','$gambar','$deskripsi')";
+  ('','$jenis_sampah','$satuan','$harga','$namaFileBaru','$deskripsi')";
   
-  mysqli_query($conn,$query);
+  $hasil = mysqli_query($conn,$query);
   
-  if ($query){
+  if ($$hasil){
     echo "
         <script>
           alert('Berhasil Menambah Data!');
