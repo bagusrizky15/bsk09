@@ -54,7 +54,10 @@ require_once("../system/config/koneksi.php");
 
   move_uploaded_file( $tmpName, $folder.$namaFile);
 
-  $query = mysqli_query($conn,"INSERT INTO sampah VALUES ('','$jenis_sampah','$satuan','$harga','$nama_file','$deskripsi')");
+  $query = "INSERT INTO sampah VALUES 
+  ('','$jenis_sampah','$satuan','$harga','$gambar','$deskripsi')";
+  
+  mysqli_query($conn,$query);
   
   if ($query){
     echo "
