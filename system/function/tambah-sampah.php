@@ -1,4 +1,5 @@
 <?php
+
  if (isset($_POST['simpan'])) {
   require_once("../system/config/koneksi.php");
   $jenis_sampah = $_POST['jenis_sampah'];
@@ -33,6 +34,7 @@
               content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-sampah'>";
   }
  }
+
  ?>
 
 
