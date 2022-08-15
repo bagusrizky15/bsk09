@@ -132,28 +132,16 @@
             daftar_user.telepon.focus();
             return false;
          }
-         if (x.length != 10) {
+         if (x.length < 10) {
             alert("Nomor telepon minimal 10 karakter");
             daftar_user.telepon.focus();
             return false;
          }
-         var x = daftar_user.email.value;
-         var cek_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-         if (x == "") {
-            alert("Maaf harap input email!");
-            daftar_user.email.focus();
-            return false;
-         }
-         if (!x.match(cek_email)) {
-            alert("Format penulisan email tidak sesuai!");
-            daftar_user.email.focus();
-            return false;
-         }
-         var x = daftar_user.password.value;
+         var y = daftar_user.password.value;
          var panjang = x.length;
 
-         if (x == "") {
+         if (y == "") {
             alert("Maaf harap input password!");
             daftar_user.password.focus();
             return false;
@@ -179,11 +167,10 @@
 <body>
    <h2 style="font-size: 30px; color: #262626;">Tambah Data Administrator</h2>
 
-
    <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
       <div class="form-group">
-         <label class="text-left">nia admin</label>
-         <input style="cursor: not-allowed;" type="text" name="nia" value="<?php echo $format; ?>" readonly />
+         <label class="text-left">nia</label>
+         <input type="text" name="nia" value="<?php echo $format; ?>" />
       </div>
 
       <div class="form-group">

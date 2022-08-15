@@ -25,6 +25,8 @@
 				</input>
 			</div>
 			<input type="submit" name="login" value="Login">
+			<br>
+			<p>Belum punya akun? Daftar <a href="registrasi.php">disini</a></p>
 		</form>
 		<!-- <a href="#">Belum punya akun? <span>Daftar disini</span></a> -->
 	</div>
