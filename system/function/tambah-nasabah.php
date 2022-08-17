@@ -27,7 +27,7 @@
       $telepon = $_POST['telepon'];
       $saldo = $_POST['saldo'];
       $sampah = $_POST['sampah'];
-
+      
       $sql = mysqli_query($conn, "SELECT * FROM nasabah WHERE nin = '$nin'");
 
       if (mysqli_fetch_array($sql) > 0) {
@@ -41,8 +41,9 @@
               return FALSE;      
       }
 
-      mysqli_query($conn, "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon','$email','$password','$saldo','$sampah')");
-
+      mysqli_query($conn, "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon',0,0)");
+      // echo "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon','$saldo','$sampah')";die;
+      // var_dump(mysqli_query($conn, "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon','$email','$password','$saldo','$sampah')"));die;
       echo "<script>
                 alert('Selamat berhasil input data!');
               </script>";

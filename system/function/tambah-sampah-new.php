@@ -1,6 +1,7 @@
 <?php
 
  if(isset($_POST['simpan'])) {
+
   require_once("../system/config/koneksi.php");
   $jenis_sampah = $_POST['jenis_sampah'];
   $satuan = $_POST['satuan'];
@@ -53,15 +54,18 @@
   $namaFileBaru = uniqid();
   $namaFileBaru .= '.';
   $namaFileBaru .= $ekstensiGambar;
-
+  var_dump($namaFileBaru);
+  var_dump($tmpName);
+  var_dump( $folder);
+  var_dump( $folder.$namaFileBaru);
   move_uploaded_file( $tmpName, $folder.$namaFileBaru);
 
   $query = "INSERT INTO sampah VALUES 
-  ('','$jenis_sampah','$satuan','$harga','$namaFileBaru','$deskripsi')";
-  
+  (0,'$jenis_sampah','$satuan','$harga','$namaFileBaru','$deskripsi')";
+   var_dump(move_uploaded_file( $tmpName, $folder.$namaFileBaru));die;
   $hasil = mysqli_query($conn,$query);
   
-  if ($$hasil){
+  if ($hasil){
     echo "
         <script>
           alert('Berhasil Menambah Data!');
