@@ -169,7 +169,7 @@ if (isset($_POST['simpan'])) {
 
    <form id="daftar_user" action="" method="POST" onsubmit="return cek_data()">
       <div class="form-group">
-         <label class="text-left">nia</label>
+         <label class="text-left">nia/username</label>
          <input type="text" name="nia" value="<?php echo $format; ?>" />
       </div>
 

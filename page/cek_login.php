@@ -9,7 +9,6 @@ if (isset($_POST['login'])) {
 	$a = mysqli_fetch_array($data_admin);
 
 	// admin
-	$email_a = $a['email'];
 	$password_a = $a['password'];
 	$level = $a['level'];
 	$nama_a = $a['nama'];
@@ -29,7 +28,6 @@ if (isset($_POST['login'])) {
 			session_start();
 			$_SESSION['level'] = $level;
 			$_SESSION['nama'] = $nama_a;
-			$_SESSION['email'] = $email_a;
 			$_SESSION['pass'] = $password_a;
 			$_SESSION['telepon'] = $telepon_a;
 			$_SESSION['nia'] = $nia;
