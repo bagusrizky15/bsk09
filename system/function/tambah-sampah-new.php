@@ -1,89 +1,100 @@
 <?php
+error_reporting(0);
+if (isset($_POST['simpan'])) {
+   require_once("../system/config/koneksi.php");
+   $jenis_sampah = $_POST['jenis_sampah'];
+   $satuan = $_POST['satuan'];
+   $harga = $_POST['harga'];
+   $namaFile = $_FILES['gambar']['name'];
+   $tmpName = $_FILES['gambar']['tmpName'];
+   $gambar = $_FILES['gambar'];
+   $deskripsi = $_POST['deskripsi'];
+   $folder = '../asset/internal/img/uploads/';
+   $ukuranFile = $_FILES['gambar']['size'];
+   $error = $_FILES['gambar']['error'];
 
- if(isset($_POST['simpan'])) {
-  require_once("../system/config/koneksi.php");
-  $jenis_sampah = $_POST['jenis_sampah'];
-  $satuan = $_POST['satuan'];
-  $harga = $_POST['harga'];
-  $namaFile = $_FILES['gambar']['name'];
-  $tmpName = $_FILES['gambar']['tmpName'];
-  $gambar = $_FILES['gambar'];
-  $deskripsi = $_POST['deskripsi'];
-  $folder = '../asset/internal/img/uploads/';
-  $ukuranFile = $_FILES['gambar']['size'];
-  $error = $_FILES['gambar']['error'];
+   //cek gambar yang di upload
 
-  //cek gambar yang di upload
-
-  if ($error === 4) {
-   echo"
+   if ($error === 4) {
+      echo "
    <script>
    alert('pilih gambar terlebih dahulu');
    </script>
    ";
-   return false;
-  }
+      return false;
+   }
 
-  //cek upload gambar atau bukan
-  
-  $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
-  $ekstensiGambar = explode('.', $namaFile);
-  $ekstensiGambar = strtolower(end($ekstensiGambar));
+   //cek upload gambar atau bukan
 
-  if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
-   # code...
-   echo "
+   $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+   $ekstensiGambar = explode('.', $namaFile);
+   $ekstensiGambar = strtolower(end($ekstensiGambar));
+
+   if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
+      # code...
+      echo "
    <script>
    alert('upload gambar');
    </script>
    ";
-  }
+   }
 
-  //cek ukuran gambar
+   //cek ukuran gambar
 
-  if ($ukuranFile > 2000000) {
-   echo "
+   if ($ukuranFile > 2000000) {
+      echo "
    <script>
    alert('ukuran maksimal gambar 2MB');
    </script>
    ";
-  }
+   }
 
-  //generate nama gambar
-  $namaFileBaru = uniqid();
-  $namaFileBaru .= '.';
-  $namaFileBaru .= $ekstensiGambar;
+   //generate nama gambar
+   $namaFileBaru = uniqid();
+   $namaFileBaru .= '.';
+   $namaFileBaru .= $ekstensiGambar;
 
-  move_uploaded_file( $tmpName, $folder.$namaFileBaru);
-
-  $query = "INSERT INTO sampah VALUES 
+   move_uploaded_file($tmpName, $folder . $namaFileBaru);
+   echo "var move ";
+   var_dump(move_uploaded_file($namaFileBaru, $folder . $namaFileBaru));
+   echo "<br>var nama filebaru ";
+   var_dump($namaFileBaru);
+   echo "<br>lokasi folder ";
+   var_dump($folder);
+   echo "<br>lokasi + nama ";
+   var_dump($folder . $namaFileBaru);
+   echo "<br>nama sementara ";
+   var_dump($tmpName);
+   echo "cek error ";
+   var_dump($error);
+   die;
+   $query = "INSERT INTO sampah VALUES 
   ('','$jenis_sampah','$satuan','$harga','$namaFileBaru','$deskripsi')";
-  
-  $hasil = mysqli_query($conn,$query);
-  
-  if ($$hasil){
-    echo "
+
+   $hasil = mysqli_query($conn, $query);
+
+   if ($$hasil) {
+      echo "
         <script>
           alert('Berhasil Menambah Data!');
         </script>
         ";
 
-        echo "<meta http-equiv='refresh'
+      echo "<meta http-equiv='refresh'
               content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-sampah'>";
-
-  }else{
-    echo "
+   } else {
+      echo "
         <script>
           alert('Gagal Menambah Data!');
         </script>
         ";
 
-        echo "<meta http-equiv='refresh'
+      echo "<meta http-equiv='refresh'
               content='0; url=http://localhost:8080/bsk09/page/admin.php?page=data-sampah'>";
-  }
- }
+   }
+}
 
- ?>
+?>
 
 <html>
 
@@ -144,7 +155,7 @@
 <body>
    <h2 style="font-size: 30px; color: #262626;">Tambah Data Sampah Baru</h2>
 
-   <form action="" method="post" enctype="multipart/form-data">
+   <form action="" method="POST" enctype="multipart/form-data">
       <div class="form-group">
          <label class="text-left">Jenis Sampah</label>
          <input type="text" placeholder="Masukan jenis sampah" name="jenis_sampah" autocomplete="off" />
