@@ -8,13 +8,12 @@ if (isset($_POST['simpan'])) {
 
   $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', password = '$password' WHERE nia='" . @$_SESSION['nia'] . "' ";
   $queryact = mysqli_query($conn, $query);
-  header("Location: admin.php");
+  
 }
-
+  header("Location: admin.php");
 ?>
 
 <html>
-
 <head>
   <title>Homepage</title>
   <!--link datatables-->
