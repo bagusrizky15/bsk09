@@ -1,6 +1,6 @@
 <?php
+error_reporting(0);
 require_once("../system/config/koneksi.php");
-
 if (isset($_POST['simpan'])) {
   $nama = $_POST['nama'];
   $telepon = $_POST['telepon'];
@@ -10,7 +10,6 @@ if (isset($_POST['simpan'])) {
   $queryact = mysqli_query($conn, $query);
   header("Location: admin.php");
 }
-
 ?>
 
 <html>

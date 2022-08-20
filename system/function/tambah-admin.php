@@ -192,7 +192,7 @@ if (isset($_POST['simpan'])) {
          <label class="">Level</label>
          <select name="level">
             <option value="p">---Pilih Level---</option>
-            <option value="Master-admin">Master-admin</option>
+            <!-- <option value="Master-admin">Master-admin</option> -->
             <option value="Admin">Admin</option>
          </select>
       </div>
